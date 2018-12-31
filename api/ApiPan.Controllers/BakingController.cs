@@ -1,4 +1,5 @@
-﻿using ApiPan.Interfaces;
+﻿using ApiPan.Decorations;
+using ApiPan.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiPan.Controllers
@@ -16,5 +17,14 @@ namespace ApiPan.Controllers
         [ActionName("getBakingStartTime")]
         [Route("api/[controller]/getBakingStartTime")]
         public string GetBakingStartTime() => cooker.GetCookingStartTime().ToString("HH:mm:ss");
+
+        [HttpGet]
+        [SkipCooking]
+        [ActionName("getDelivery")]
+        [Route("api/[controller]/getDelivery")]
+        public string GetDelivery()
+        {
+            return "No way I will get here with the attribute decoration";
+        }
     }
 }

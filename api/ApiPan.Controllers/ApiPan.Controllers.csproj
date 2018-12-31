@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ApiPan.Decorations\ApiPan.Decorations.csproj" />
     <ProjectReference Include="..\ApiPan.Interfaces\ApiPan.Interfaces.csproj" />
   </ItemGroup>
 
