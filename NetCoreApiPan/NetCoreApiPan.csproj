@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>    
+    <ProjectReference Include="..\api\ApiPan.Controllers\ApiPan.Controllers.csproj" />    
+    <ProjectReference Include="..\api\ApiPan.Implementation\ApiPan.Implementation.csproj" />
+  </ItemGroup>
+
 </Project>

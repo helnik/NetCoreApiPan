@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApiPan", "NetCoreApiPan\NetCoreApiPan.csproj", "{15080308-6F14-4701-A1A5-95E62EE8AD9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreApiPan", "NetCoreApiPan\NetCoreApiPan.csproj", "{15080308-6F14-4701-A1A5-95E62EE8AD9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{182B5258-5E3D-4B9E-8665-776CC6C45C30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Interfaces", "api\ApiPan.Interfaces\ApiPan.Interfaces.csproj", "{0185CA75-DA13-4B77-B8C2-D90651B91545}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Controllers", "api\ApiPan.Controllers\ApiPan.Controllers.csproj", "{D5A0ADDD-E201-4262-8DFE-CC313A761D9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Implementation", "api\ApiPan.Implementation\ApiPan.Implementation.csproj", "{BED59D74-DD97-4376-B2C0-B810D03DBFFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,26 @@ Global
 		{15080308-6F14-4701-A1A5-95E62EE8AD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15080308-6F14-4701-A1A5-95E62EE8AD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15080308-6F14-4701-A1A5-95E62EE8AD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0185CA75-DA13-4B77-B8C2-D90651B91545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0185CA75-DA13-4B77-B8C2-D90651B91545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0185CA75-DA13-4B77-B8C2-D90651B91545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0185CA75-DA13-4B77-B8C2-D90651B91545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A0ADDD-E201-4262-8DFE-CC313A761D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A0ADDD-E201-4262-8DFE-CC313A761D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A0ADDD-E201-4262-8DFE-CC313A761D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A0ADDD-E201-4262-8DFE-CC313A761D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED59D74-DD97-4376-B2C0-B810D03DBFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED59D74-DD97-4376-B2C0-B810D03DBFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED59D74-DD97-4376-B2C0-B810D03DBFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED59D74-DD97-4376-B2C0-B810D03DBFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0185CA75-DA13-4B77-B8C2-D90651B91545} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
+		{D5A0ADDD-E201-4262-8DFE-CC313A761D9A} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
+		{BED59D74-DD97-4376-B2C0-B810D03DBFFA} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B66B362-DB7E-4D32-9C58-DC0087360795}

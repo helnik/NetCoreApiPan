@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using ApiPan.Implementation;
+using ApiPan.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +28,18 @@ namespace NetCoreApiPan
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services
+                .AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddApplicationPart(Assembly.Load("ApiPan.Controllers"))
+                .AddControllersAsServices();
+            RegisterDIServices(services);
+        }
+
+        private void RegisterDIServices(IServiceCollection services)
+        {
+            services
+                .AddSingleton<ICooker, Baker>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
