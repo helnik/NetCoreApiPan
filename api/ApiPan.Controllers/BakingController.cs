@@ -1,5 +1,6 @@
 ﻿using ApiPan.Decorations;
 using ApiPan.Interfaces;
+using ApiPan.Types;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiPan.Controllers
@@ -12,6 +13,12 @@ namespace ApiPan.Controllers
         {
             cooker = cookerService;
         }
+
+        [HttpGet]
+        [ActionName("getRecipeByMealName")]
+        [Route("api/[controller]/getRecipeByMealName/{mealName}")]
+        public MealsList GetRecipeByMealName(string mealName) => cooker.GetRecipeByMealName(mealName);
+
 
         [HttpGet]
         [ActionName("startBaking")]
