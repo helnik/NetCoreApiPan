@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Implementation", "ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Decorations", "api\ApiPan.Decorations\ApiPan.Decorations.csproj", "{ED48CE77-3509-4624-BC23-92B223C38DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiPan.Types", "api\ApiPan.Types\ApiPan.Types.csproj", "{AE23EBEB-DA75-49A9-9201-987272CD0D19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiPan.Types", "api\ApiPan.Types\ApiPan.Types.csproj", "{AE23EBEB-DA75-49A9-9201-987272CD0D19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiPan.Middleware", "api\ApiPan.Middleware\ApiPan.Middleware.csproj", "{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{AE23EBEB-DA75-49A9-9201-987272CD0D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE23EBEB-DA75-49A9-9201-987272CD0D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE23EBEB-DA75-49A9-9201-987272CD0D19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{BED59D74-DD97-4376-B2C0-B810D03DBFFA} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
 		{ED48CE77-3509-4624-BC23-92B223C38DAD} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
 		{AE23EBEB-DA75-49A9-9201-987272CD0D19} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
+		{B6278E9A-6C6E-4C23-9E6E-1CDC412588BA} = {182B5258-5E3D-4B9E-8665-776CC6C45C30}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B66B362-DB7E-4D32-9C58-DC0087360795}

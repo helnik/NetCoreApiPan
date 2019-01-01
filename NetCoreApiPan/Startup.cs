@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using ApiPan.Middleware;
+using Microsoft.AspNetCore.Http;
 
 namespace NetCoreApiPan
 {
@@ -57,6 +59,9 @@ namespace NetCoreApiPan
                 app.UseHsts();
             }
 
+            app.MapWhen(context => context.Request.Path.Value.Contains("alcohol"), AlcoholMapMiddleware.HandleAlcoholAsync);
+            app.Map("/cocktail", AlcoholMapMiddleware.HandleCocktailAsync);
+            app.UsePrepareMealMiddleware();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

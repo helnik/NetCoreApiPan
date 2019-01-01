@@ -13,7 +13,8 @@
   <ItemGroup>    
     <ProjectReference Include="..\api\ApiPan.Controllers\ApiPan.Controllers.csproj" />    
     <ProjectReference Include="..\api\ApiPan.Decorations\ApiPan.Decorations.csproj" />    
-    <ProjectReference Include="..\api\ApiPan.Implementation\ApiPan.Implementation.csproj" />
+    <ProjectReference Include="..\api\ApiPan.Implementation\ApiPan.Implementation.csproj" />    
+    <ProjectReference Include="..\api\ApiPan.Middleware\ApiPan.Middleware.csproj" />
   </ItemGroup>
 
 </Project>
