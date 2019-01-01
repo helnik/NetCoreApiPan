@@ -14,6 +14,11 @@ namespace ApiPan.Controllers
         }
 
         [HttpGet]
+        [ActionName("startBaking")]
+        [Route("api/[controller]/startBaking/{temp}")]
+        public string StartBaking(int temp) => cooker.StartCooking(temp);
+
+        [HttpGet]
         [ActionName("getBakingStartTime")]
         [Route("api/[controller]/getBakingStartTime")]
         public string GetBakingStartTime() => cooker.GetCookingStartTime().ToString("HH:mm:ss");
@@ -22,9 +27,6 @@ namespace ApiPan.Controllers
         [SkipCooking]
         [ActionName("getDelivery")]
         [Route("api/[controller]/getDelivery")]
-        public string GetDelivery()
-        {
-            return "No way I will get here with the attribute decoration";
-        }
+        public string GetDelivery() => "No way I will get here with the attribute decoration";
     }
 }

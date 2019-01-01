@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using ApiPan.Decorations;
+﻿using ApiPan.Decorations;
 using ApiPan.Implementation;
 using ApiPan.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System.Reflection;
 
 namespace NetCoreApiPan
 {
@@ -41,12 +34,14 @@ namespace NetCoreApiPan
         private void RegisterDIServices(IServiceCollection services)
         {
             services
-                .AddSingleton<ICooker, Baker>();
+                .AddSingleton<ICooker, Baker>()
+                .AddSingleton<ITemperatureChecker, TemperatureChecker>();
         }
 
         private void RegisterFilters(FilterCollection filters)
         {
             filters.Add(new SkipCookingFilter());
+            filters.Add<TemperatureFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
