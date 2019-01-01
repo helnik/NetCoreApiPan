@@ -1,3 +1,3 @@
 # NetCoreApiPan
 
-Simple template for .net core Web Api
+Simple template for .NET Core Web Api
