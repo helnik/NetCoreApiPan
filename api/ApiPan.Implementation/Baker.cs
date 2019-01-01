@@ -23,8 +23,5 @@ namespace ApiPan.Implementation
             var resp = client.Execute($"search.php?s={mealName}"); //Pancakes
             return JsonConvert.DeserializeObject<MealsList>(resp.Content);
         }
-
-
-      
     }
 }
