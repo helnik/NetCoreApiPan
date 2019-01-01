@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>    
-    <ProjectReference Include="..\ApiPan.Decorations\ApiPan.Decorations.csproj" />    
     <ProjectReference Include="..\api\ApiPan.Controllers\ApiPan.Controllers.csproj" />    
+    <ProjectReference Include="..\api\ApiPan.Decorations\ApiPan.Decorations.csproj" />    
     <ProjectReference Include="..\api\ApiPan.Implementation\ApiPan.Implementation.csproj" />
   </ItemGroup>
 
