@@ -5,7 +5,7 @@ namespace ApiPan.Middleware
 {
     public static class AlcoholMapMiddleware
     {
-        public static void HandleAlcoholAsync(IApplicationBuilder app)
+        public static void HandleAlcohol(IApplicationBuilder app)
         {
             app.Run(async context =>
             {
@@ -13,7 +13,7 @@ namespace ApiPan.Middleware
             });
         }
 
-        public static void HandleCocktailAsync(IApplicationBuilder app)
+        public static void HandleCocktail(IApplicationBuilder app)
         {
             app.Run(async context =>
             {

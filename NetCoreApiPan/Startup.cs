@@ -59,8 +59,8 @@ namespace NetCoreApiPan
                 app.UseHsts();
             }
 
-            app.MapWhen(context => context.Request.Path.Value.Contains("alcohol"), AlcoholMapMiddleware.HandleAlcoholAsync);
-            app.Map("/cocktail", AlcoholMapMiddleware.HandleCocktailAsync);
+            app.MapWhen(context => context.Request.Path.Value.Contains("alcohol"), AlcoholMapMiddleware.HandleAlcohol);
+            app.Map("/cocktail", AlcoholMapMiddleware.HandleCocktail);
             app.UsePrepareMealMiddleware();
             app.UseHttpsRedirection();
             app.UseMvc();
