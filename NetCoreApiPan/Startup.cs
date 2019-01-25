@@ -64,6 +64,10 @@ namespace NetCoreApiPan
             app.UsePrepareMealMiddleware();
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            //Disable from launchsetting.json default behavior (i.e. api/values) let it use a welcome message
+            app.Run(async (context) => { await context.Response.WriteAsync("Welcome to NetCoreApiPan !!"); });
+
         }
     }
 }
