@@ -29,8 +29,7 @@ namespace NetCoreApiPan
             services
                 .AddMvc(options => RegisterFilters(options.Filters))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddApplicationPart(Assembly.Load("ApiPan.Controllers"))
-                .AddControllersAsServices();
+                .AddApplicationPart(Assembly.Load("ApiPan.Controllers"));
         }
 
         private void RegisterDIServices(IServiceCollection services)
