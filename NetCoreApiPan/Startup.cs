@@ -11,6 +11,8 @@ using System.Reflection;
 using ApiPan.Controllers;
 using ApiPan.Middleware;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace NetCoreApiPan
 {
@@ -29,6 +31,7 @@ namespace NetCoreApiPan
             RegisterDIServices(services);
             services
                 .AddMvc(options => RegisterFilters(options.Filters))
+                .AddJsonOptions(options => options.SerializerSettings.Formatting = Formatting.Indented)//indented json response
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddApplicationPart(typeof(BakingController).Assembly); //or .AddApplicationPart(Assembly.Load("ApiPan.Controllers"));
         }
