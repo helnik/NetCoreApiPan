@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ApiPan.Controllers
 {
     [ApiController]
+    [Route("api/baking")]
     public class BakingController : ControllerBase
     {
         private readonly ICooker cooker;
@@ -14,26 +15,22 @@ namespace ApiPan.Controllers
             cooker = cookerService;
         }
 
-        [HttpGet]
+        [HttpGet("getRecipeByMealName/{mealName}")]
         [ActionName("getRecipeByMealName")]
-        [Route("api/[controller]/getRecipeByMealName/{mealName}")]
         public MealsList GetRecipeByMealName(string mealName) => cooker.GetRecipeByMealName(mealName);
 
 
-        [HttpGet]
+        [HttpGet("startBaking/{temp}")]
         [ActionName("startBaking")]
-        [Route("api/[controller]/startBaking/{temp}")]
         public string StartBaking(int temp) => cooker.StartCooking(temp);
 
-        [HttpGet]
+        [HttpGet("getBakingStartTime")]
         [ActionName("getBakingStartTime")]
-        [Route("api/[controller]/getBakingStartTime")]
         public string GetBakingStartTime() => cooker.GetCookingStartTime().ToString("HH:mm:ss");
 
-        [HttpGet]
-        [SkipCooking]
+        [HttpGet("getDelivery")]
         [ActionName("getDelivery")]
-        [Route("api/[controller]/getDelivery")]
+        [SkipCooking]
         public string GetDelivery() => "No way I will get here with the attribute decoration";
     }
 }
